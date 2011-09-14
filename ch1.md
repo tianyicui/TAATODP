@@ -24,15 +24,15 @@ Terminology
 -----------
 
 * Define:
-  * **optimal value function**: the rule that assigns values to various subproblems, it has **arguments**.
-  * **optimal policy function**: the rule that associats the best first decision with each subproblem.
-  * **recurrence relation**: a formula or set of formulas relating various values of _*OVF*_.
-  * **boundary conditions**.
+    - **optimal value function**: the rule that assigns values to various subproblems, it has **arguments**.
+    - **optimal policy function**: the rule that associats the best first decision with each subproblem.
+    - **recurrence relation**: a formula or set of formulas relating various values of _*OVF*_.
+    - **boundary conditions**.
 
 * Procedure:
-  * To solve a problem by dynamic programming, we choose the arguments of the optimal value function and define that function to allow the use of the principle of optimality to write a recurrence relation.
-  * Starting with the boundary conditions, we then use the recurrence relation to determine concurrently the optimal value and policy functions.
-  * When the optimal value and decision are known for the value of the argument that represents the original whole problem, the solution is completed and the best path can be traced out using the optimal policy function alone.
+    - To solve a problem by dynamic programming, we choose the arguments of the optimal value function and define that function to allow the use of the principle of optimality to write a recurrence relation.
+    - Starting with the boundary conditions, we then use the recurrence relation to determine concurrently the optimal value and policy functions.
+    - When the optimal value and decision are known for the value of the argument that represents the original whole problem, the solution is completed and the best path can be traced out using the optimal policy function alone.
 
 Computational Efficiency
 ------------------------
