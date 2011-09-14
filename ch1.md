@@ -69,4 +69,6 @@ Stage and State
 The Doubling-Up Procedure
 -------------------------
 
+* Usually, the cost of a certain step _do not depend_ on the stage/time.
 
+* The doubling-up procedure is that the stage `$M+N$` depends on stage `$M$` and stage `$N$`.
