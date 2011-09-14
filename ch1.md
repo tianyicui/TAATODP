@@ -37,4 +37,22 @@ Terminology
 Computational Efficiency
 ------------------------
 
+* The time complexity of previous problem is `$O(N^2)$`.
 
+Forward Dynamic Programming
+---------------------------
+
+* We can reverse the viewpoint of start point and end point, to obtain another representation of sub-problems. This is called _*forward* dynamic programming procedure_.
+
+A More Complicated Example
+--------------------------
+
+* Problem: when turning in path requires additional cost.
+
+Solution of the Example
+-----------------------
+
+* Solution: add one _argument_ to the _optimal value function_.
+
+The Consultant Question
+-----------------------
