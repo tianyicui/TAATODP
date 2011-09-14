@@ -56,3 +56,17 @@ Solution of the Example
 
 The Consultant Question
 -----------------------
+
+* The art of dynamic-programming formulation involves the proper choice of the arguments for the optimal value function.
+
+* A good way to determin the right amount of arguments of _OVF_ is to think as "asking the consultant question."
+
+Stage and State
+---------------
+
+* In _OVF_, the *monotonic* argument is called the *_stage_ variale*, all the others are called *_state_ variables*.
+
+The Doubling-Up Procedure
+-------------------------
+
+
