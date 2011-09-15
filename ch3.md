@@ -34,4 +34,31 @@ Miscellaneous Remarks
 Unspecified Initial Resources
 -----------------------------
 
+* Two kinds of resource which have unit costs, initially given money, how to buy resources and allocate them optimally.
 
+* Variant: three kinds of resource.
+
+Lagrange Multipliers
+--------------------
+
+* TODO: it's so brand new...
+
+Justlflcatlon of the Procedure
+------------------------------
+
+* TODO: skipped
+
+Geometric Interpretation of the Procedure
+-----------------------------------------
+
+* TODO: skipped
+
+Some Additional Cases
+---------------------
+
+* TODO: skipped
+
+More Than Two Constraints
+-------------------------
+
+* TODO: skipped
