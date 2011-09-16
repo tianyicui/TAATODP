@@ -18,3 +18,18 @@ Algorithm 1
 * One kind of item is one kind of arc.
 
 * Find longest path in the graph.
+
+Algorithm 2
+-----------
+
+* Slightly improved version of algorithm 1, solution has unique representation, do not calculate one solution multiple times.
+
+Algorithm 3
+-----------
+
+* _Forward-looking_ procedure, use permanent (optimal) value of `f(w)` to compute temporary values of `f(w)` for larger `w`.
+
+Algorithm 4
+-----------
+
+* Use _breakpoints_.
