@@ -1,0 +1,277 @@
+<p>The reading note of first 8 chapters of <em>The Art and Theory of Dynamic Programming</em>.</p>
+<ul>
+<li><p>Dynamic Programming cannot be passively teached, but <em>actively</em> learned by <em>considerable practice</em> with solving problmems <em>on one's own</em>.</p></li>
+<li><p>Why dynamic programming is more <em>art</em> than <em>science</em> we do not know. But <em>common sense</em>, not mathematical manipulation, is what it takes to be successful in a course in dynamic programming.</p></li>
+<li>Goals:
+<ul>
+<li>Primary: identify <em>state</em> and <em>stage</em> variables, and define and characterize the <em>optimal value function</em>.</li>
+<li>Secondary: use DP analytically to establish the <em>structure</em> of the optimal solution and the necessary conditions.</li>
+<li>Final: special techniques.</li>
+</ul></li>
+<li>Chapters
+<ul>
+<li>1-8: deterministic</li>
+<li>9-14: stochastic</li>
+<li>15: learning related</li>
+<li>When used in undergraduate classes: 1-4, 6(1-4), 9-11, 13, 15(1-5).</li>
+</ul></li>
+</ul>
+<h1 id="elementary-path-problems">Elementary Path Problems</h1>
+<h2 id="introduction">Introduction</h2>
+<ul>
+<li><p>Definition: optimization procedure that is particularly applicable to problems requiring a sequence of interrelated decisions.</p></li>
+<li><p>Sequence of <em>decisions</em> to sequence of <em>situations</em>, to <em>optimize</em> some measure of <em>value</em>.</p></li>
+</ul>
+<h2 id="a-simple-path-problem">A Simple Path Problem</h2>
+<ul>
+<li>Problem: one-way street, Manhattan-style city, from A to B.</li>
+</ul>
+<h2 id="the-dynamic-programming-solution">The Dynamic-Programming Solution</h2>
+<ul>
+<li><p>Define sub-problems, solve the original problem by using the results from sub-problems.</p></li>
+<li><p>So we can solve all the sub-problems recursively in some order.</p></li>
+</ul>
+<h2 id="terminology">Terminology</h2>
+<ul>
+<li>Define:
+<ul>
+<li><strong>optimal value function</strong>: the rule that assigns values to various subproblems, it has <strong>arguments</strong>.</li>
+<li><strong>optimal policy function</strong>: the rule that associats the best first decision with each subproblem.</li>
+<li><strong>recurrence relation</strong>: a formula or set of formulas relating various values of <em><em>OVF</em></em>.</li>
+<li><strong>boundary conditions</strong>.</li>
+</ul></li>
+<li>Procedure:
+<ul>
+<li>To solve a problem by dynamic programming, we choose the arguments of the optimal value function and define that function to allow the use of the principle of optimality to write a recurrence relation.</li>
+<li>Starting with the boundary conditions, we then use the recurrence relation to determine concurrently the optimal value and policy functions.</li>
+<li>When the optimal value and decision are known for the value of the argument that represents the original whole problem, the solution is completed and the best path can be traced out using the optimal policy function alone.</li>
+</ul></li>
+</ul>
+<h2 id="computational-efficiency">Computational Efficiency</h2>
+<ul>
+<li>The time complexity of previous problem is <code>$O(N^2)$</code>.</li>
+</ul>
+<h2 id="forward-dynamic-programming">Forward Dynamic Programming</h2>
+<ul>
+<li>We can reverse the viewpoint of start point and end point, to obtain another representation of sub-problems. This is called <em><em>forward</em> dynamic programming procedure</em>.</li>
+</ul>
+<h2 id="a-more-complicated-example">A More Complicated Example</h2>
+<ul>
+<li>Problem: when turning in path requires additional cost.</li>
+</ul>
+<h2 id="solution-of-the-example">Solution of the Example</h2>
+<ul>
+<li>Solution: add one <em>argument</em> to the <em>optimal value function</em>.</li>
+</ul>
+<h2 id="the-consultant-question">The Consultant Question</h2>
+<ul>
+<li><p>The art of dynamic-programming formulation involves the proper choice of the arguments for the optimal value function.</p></li>
+<li><p>A good way to determin the right amount of arguments of <em>OVF</em> is to think as &quot;asking the consultant question.&quot;</p></li>
+</ul>
+<h2 id="stage-and-state">Stage and State</h2>
+<ul>
+<li>In <em>OVF</em>, the <em>monotonic</em> argument is called the <em><em>stage</em> variale</em>, all the others are called <em><em>state</em> variables</em>.</li>
+</ul>
+<h2 id="the-doubling-up-procedure">The Doubling-Up Procedure</h2>
+<ul>
+<li><p>Usually, the cost of a certain step <em>do not depend</em> on the stage/time.</p></li>
+<li><p>The doubling-up procedure is that the stage <code>$M+N$</code> depends on stage <code>$M$</code> and stage <code>$N$</code>.</p></li>
+</ul>
+<h1 id="equipment-replacement">Equipment Replacement</h1>
+<h2 id="the-simplest-model">The Simplest Model</h2>
+<ul>
+<li><p>In <code>N</code> time periods, we originally have a machine with age <code>y</code>. <code>c(i)</code> is the cost of operating a machine with age <code>i</code>; <code>p</code> is price of a new machine; <code>t(i)</code> is trade-in value for machine with age <code>i</code>; <code>s(i)</code> is the salvage value of machine with age <code>i</code> at the end of <code>N</code> time periods.</p></li>
+<li><p>The problem is to minimize the total cost during the next <code>N</code> time periods.</p></li>
+</ul>
+<h2 id="dynamic-programming-formulation">Dynamic-Programming Formulation</h2>
+<ul>
+<li>The optimal value function is trivial and left as exercises.</li>
+</ul>
+<h2 id="shortest-path-representation-of-the-problem">Shortest-Path Representation of the Problem</h2>
+<ul>
+<li>Use <em>age of machine</em> as y-axis and <em>time</em> as x-axis, we can represent the problem as a shortest-path problem.</li>
+</ul>
+<h2 id="regeneration-polnt-approach">Regeneration Polnt Approach</h2>
+<ul>
+<li><strong>TODO</strong></li>
+</ul>
+<h2 id="more-complex-equipment-replacement-models">More Complex Equipment-Replacement Models</h2>
+<ul>
+<li><p>Added the third choice between &quot;keep&quot; and &quot;replace&quot;: &quot;overhaul&quot;.</p></li>
+<li><p>And other variants in exercises.</p></li>
+</ul>
+<h1 id="resource-allocation">Resource Allocation</h1>
+<h2 id="the-simplest-model-1">The Simplest Model</h2>
+<ul>
+<li><p>Not really <em>dynamic</em> (i.e. requiring a <em>sequence</em> of decisions).</p></li>
+<li><p><code>X</code> units of a resourse to be distributed among <code>N</code> activities. Each activity has a return function <code>r_i(x)</code>. How to allocate the resourse to maximize the total return?</p></li>
+</ul>
+<h2 id="dynamic-programming-formulation-1">Dynamic-Programming Formulation</h2>
+<ul>
+<li>To use dynamic programming, we view the solution set as stages.</li>
+</ul>
+<h2 id="numerical-solution">Numerical Solution</h2>
+<h2 id="miscellaneous-remarks">Miscellaneous Remarks</h2>
+<ul>
+<li><p>This problem can be represent as a longest-path problem.</p></li>
+<li>Variants:
+<ul>
+<li>forward DP procedure</li>
+<li>return function not monotonic</li>
+<li>doubling-up procedure when activities have the same return function</li>
+<li>two- or three-dimentional resource</li>
+<li>additional requirement: total allocation for a subset have a lower limit</li>
+<li>additional requirement: at most <code>M</code> of the allocations may be nonzero</li>
+<li>additional requirement: if <code>k</code> activities are nonzero, a cost <code>h(k)</code> is assessed.</li>
+<li>two kinds of return: money and public goodwill, maximize money while goodwill has a lower limit.</li>
+</ul></li>
+</ul>
+<h2 id="unspecified-initial-resources">Unspecified Initial Resources</h2>
+<ul>
+<li><p>Two kinds of resource which have unit costs, initially given money, how to buy resources and allocate them optimally.</p></li>
+<li><p>Variant: three kinds of resource.</p></li>
+</ul>
+<h2 id="lagrange-multipliers">Lagrange Multipliers</h2>
+<ul>
+<li>TODO: it's so brand new...</li>
+</ul>
+<h2 id="justlflcatlon-of-the-procedure">Justlflcatlon of the Procedure</h2>
+<ul>
+<li>TODO: skipped</li>
+</ul>
+<h2 id="geometric-interpretation-of-the-procedure">Geometric Interpretation of the Procedure</h2>
+<ul>
+<li>TODO: skipped</li>
+</ul>
+<h2 id="some-additional-cases">Some Additional Cases</h2>
+<ul>
+<li>TODO: skipped</li>
+</ul>
+<h2 id="more-than-two-constraints">More Than Two Constraints</h2>
+<ul>
+<li>TODO: skipped</li>
+</ul>
+<h1 id="the-general-shortest-path-problem">The General Shortest-Path Problem</h1>
+<h2 id="introduction-1">Introduction</h2>
+<ul>
+<li>Shortest path in a general directed graph.</li>
+</ul>
+<h2 id="acyclic-networks">Acyclic Networks</h2>
+<ul>
+<li><p>Graphs with no cycle.</p></li>
+<li><p>Topologic order: DP stages.</p></li>
+<li><p>Can find not only shortest distance but also longest one.</p></li>
+</ul>
+<h2 id="general-networks">General Networks</h2>
+<ul>
+<li><p>No natural ordering.</p></li>
+<li><p>Dijkstra algorithm: path length as DP order/stages.</p></li>
+<li><p>Bellman-Ford: <code>k</code> iterations determine the shortest path when <code>k</code> or fewer arcs must be used.</p></li>
+<li>Yen's algorithm:
+<ul>
+<li>reversal: path <code>1-5-2-3-4</code> has two reversals at <code>5</code> and <code>2</code>.</li>
+<li>the <code>i</code>th iteration find the length of the shortest path from node <code>1</code> to node <code>k</code> among all paths have <code>i-1</code> or fewer reversals.</li>
+<li>if the <code>i</code>th iteration does not update for some node, then it's converged; if convergence does not occur by <code>N</code>th iteration, negative cycle exists.</li>
+<li>most efficient.</li>
+</ul></li>
+<li>All-pair shortest paths
+<ul>
+<li>Floyd</li>
+<li>Dantzig: similar but longer to write</li>
+</ul></li>
+<li>Variants
+<ul>
+<li>value of path determined by the max/min one arc</li>
+<li>value of path are product of values on arc</li>
+<li>travel time on an arc determined by the start time</li>
+<li>value of arc determined by the previous traveled arc</li>
+<li>Dijkstra-like algorithm connecting two disjoint subset</li>
+</ul></li>
+</ul>
+<h1 id="the-traveling-salesman-problem">The Traveling-Salesman Problem</h1>
+<h2 id="introduction-2">Introduction</h2>
+<ul>
+<li>Definition: a minimum-cost tour traveling all <code>N</code> vertexes and returning to start.</li>
+</ul>
+<h2 id="dynamic-programming-formulation-2">Dynamic-Programming Formulation</h2>
+<ul>
+<li><p><code>f_i(j,S)</code> = the length of the shortest path from city <code>1</code> to city <code>j</code> via the set of <code>i</code> intermediate cities <code>S</code></p></li>
+<li><p>Complexity <code>N^2 * 2^N</code>.</p></li>
+</ul>
+<h2 id="a-doubling-up-procedure-for-the-case-of-symmetric-distances">A Doubling-Up Procedure for the Case of Symmetric Distances</h2>
+<ul>
+<li><p>When the distance matrix of graph is a symmetric, assume <code>N</code> is even, we can solve all <code>f_i(j,S)</code> where <code>i &lt;= (N-2)/2</code>, then combine complement two of them.</p></li>
+<li><p>Significantly reduced computing time.</p></li>
+</ul>
+<h2 id="other-versions-of-the-traveling-salesman-problem">Other Versions of the Traveling-Salesman Problem</h2>
+<ul>
+<li><p>Variant 1: without returning to city 1.</p></li>
+<li><p>Variant 2: visit other vertexes at least once, not exactly once.</p></li>
+<li>Exercises:
+<ul>
+<li>diffferent variants of values on arc</li>
+<li>adding requirements &quot;city <code>i</code> must preced <code>j</code>&quot;</li>
+<li>use <code>O(2^N)</code> Dijkstra-like labels to solve the original problem</li>
+</ul></li>
+</ul>
+<h1 id="problems-with-linear-dynamics-and-quadratic-criteria">Problems with Linear Dynamics and Quadratic Criteria</h1>
+<h2 id="introduction-3">Introduction</h2>
+<ul>
+<li><p>Problems with a struture different from, but analogous to, the common structure of all linear-programming problems.</p></li>
+<li><p>Mathematical analysis leads to routine solution of problems with dozens of state variables.</p></li>
+<li><p>Newton-Raphson procedure to find the minimum/maximum of a function.</p></li>
+</ul>
+<h2 id="a-linear-dynamics-quadratic-criterion-model">A Linear Dynamics, Quadratic Criterion Model</h2>
+<ul>
+<li><em>Linear dynamic system</em>:
+<ul>
+<li><code>x(i)</code> state at stage <code>i</code></li>
+<li><code>y(i)</code> the decision</li>
+<li><code>x(i+1)</code> = <code>g(i)x(i) + h(i)y(i)</code></li>
+</ul></li>
+<li><em>Quadratic Creterion</em>
+<ul>
+<li><code>J</code> = <code>Σ[a(i)x^2(i)+c(i)y^2(i)] + lx^2(N)</code></li>
+<li>Minimize <code>J</code></li>
+</ul></li>
+</ul>
+<h2 id="a-particular-problem">A Particular Problem</h2>
+<h2 id="dynamic-programming-solution">Dynamic-Programming Solution</h2>
+<p>TODO: not read.</p>
+<h2 id="specified-terminal-conditions">Specified Terminal Conditions</h2>
+<p>TODO: not read.</p>
+<h2 id="a-more-general-optimal-value-function">A More General Optimal Value Function</h2>
+<p>TODO: not read.</p>
+<h1 id="discrete-time-optimal-control-problems">Discrete-Time Optimal-Control Problems</h1>
+<ul>
+<li>TODO: not read</li>
+</ul>
+<h1 id="the-cargo-loading-problem">The Cargo-Loading Problem</h1>
+<h2 id="introduction-4">Introduction</h2>
+<ul>
+<li>Complete pack
+<ul>
+<li>Item <code>i</code></li>
+<li>Weight of item <code>w_i</code></li>
+<li>Value of item <code>v_i</code></li>
+<li>Capacity <code>w</code></li>
+</ul></li>
+</ul>
+<h2 id="algorithm-1">Algorithm 1</h2>
+<ul>
+<li><p>Graph with <code>0..w</code> as vertexes.</p></li>
+<li><p>One kind of item is one kind of arc.</p></li>
+<li><p>Find longest path in the graph.</p></li>
+</ul>
+<h2 id="algorithm-2">Algorithm 2</h2>
+<ul>
+<li>Slightly improved version of algorithm 1, solution has unique representation, do not calculate one solution multiple times.</li>
+</ul>
+<h2 id="algorithm-3">Algorithm 3</h2>
+<ul>
+<li><em>Forward-looking</em> procedure, use permanent (optimal) value of <code>f(w)</code> to compute temporary values of <code>f(w)</code> for larger <code>w</code>.</li>
+</ul>
+<h2 id="algorithm-4">Algorithm 4</h2>
+<ul>
+<li>Use <em>breakpoints</em>.</li>
+</ul>
