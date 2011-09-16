@@ -25,4 +25,17 @@ A Linear Dynamics, Quadratic Criterion Model
 A Particular Problem
 --------------------
 
+Dynamic-Programming Solution
+----------------------------
 
+TODO: not read.
+
+Specified Terminal Conditions
+-----------------------------
+
+TODO: not read.
+
+A More General Optimal Value Function
+-------------------------------------
+
+TODO: not read.
